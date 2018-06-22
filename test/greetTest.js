@@ -14,5 +14,10 @@ describe('greet.js test', function () {
         Greet(true);
       }, 'error not thrown');
     });
+    it('should throw no data entered error', () => {
+      assert.throws(function () {
+        Greet('');
+      }, 'error not thrown');
+    });
   });
 });
